@@ -118,33 +118,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Form Validation and Submission
-  const contactForm = document.getElementById("contactForm");
+  // const contactForm = document.getElementById("contactForm");
 
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+  // contactForm.addEventListener("submit", (e) => {
+  //   e.preventDefault();
 
-    // Basic form validation
-    const name = contactForm.querySelector('input[type="text"]').value;
-    const email = contactForm.querySelector('input[type="email"]').value;
-    const message = contactForm.querySelector("textarea").value;
+  //   // // Basic form validation
+  //   // const name = contactForm.querySelector('input[type="text"]').value;
+  //   // const email = contactForm.querySelector('input[type="email"]').value;
+  //   // const message = contactForm.querySelector("textarea").value;
 
-    if (!name || !email || !message) {
-      alert("Please fill in all fields");
-      return;
-    }
+  //   // if (!name || !email || !message) {
+  //   //   alert("Please fill in all fields");
+  //   //   return;
+  //   // }
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address");
-      return;
-    }
+  //   // // Email validation
+  //   // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   // if (!emailRegex.test(email)) {
+  //   //   alert("Please enter a valid email address");
+  //   //   return;
+  //   // }
 
-    // Here you would typically send the form data to your server
-    // For now, we'll just show a success message
-    alert("Message sent successfully!");
-    contactForm.reset();
-  });
+  //   // // Here you would typically send the form data to your server
+  //   // // For now, we'll just show a success message
+  //   // alert("Message sent successfully!");
+  //   // contactForm.reset();
+  // });
 
   // Newsletter Form Submission
   const newsletterForm = document.querySelector(".newsletter-form");

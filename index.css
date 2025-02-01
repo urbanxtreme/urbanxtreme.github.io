@@ -29,6 +29,7 @@
   --text-dark: #e2e8f0;
   --text-light: #64748b;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -353,12 +354,11 @@ nav {
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
-  border-right: 2px solid var(--primary-color); /* Initial border for animation */
+  border-right: 2px solid var(--primary-color);
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  animation-fill-mode: forwards; /* Ensure the final state is retained */
+  animation-fill-mode: forwards;
 }
 
-/* Typing animation */
 @keyframes typing {
   from {
     width: 0;
@@ -368,9 +368,9 @@ nav {
   }
 }
 
-/* Blinking caret animation */
 @keyframes blink-caret {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {
@@ -378,12 +378,10 @@ nav {
   }
 }
 
-/* Remove border after typing animation */
 .typewriter-done {
-  border-right: none; /* Removes the border completely */
-  animation: none; /* Stops blinking */
+  border-right: none;
+  animation: none;
 }
-
 
 /* Button Styles */
 .btn {
@@ -691,11 +689,18 @@ nav {
   background: white;
   border-radius: 20px;
   box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 [data-theme="dark"] .contact-info,
 [data-theme="dark"] .contact-form {
   background: #1e293b;
+}
+
+.contact-info:hover,
+.contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .contact-item {
@@ -714,6 +719,11 @@ nav {
   align-items: center;
   justify-content: center;
   color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-item:hover i {
+  transform: scale(1.1);
 }
 
 .form-group {
@@ -730,7 +740,14 @@ nav {
   border-bottom: 2px solid var(--text-light);
   color: var(--text-dark);
   font-size: 1rem;
-  transition: var(--transition);
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom: 2px solid var(--primary-color);
+  box-shadow: 0px 5px 15px rgba(0, 0, 255, 0.2);
 }
 
 .form-group label {
@@ -738,7 +755,7 @@ nav {
   top: 1rem;
   left: 0;
   pointer-events: none;
-  transition: var(--transition);
+  transition: all 0.3s ease-in-out;
   color: var(--text-light);
 }
 
@@ -758,7 +775,7 @@ nav {
   width: 0;
   height: 2px;
   background: var(--gradient);
-  transition: var(--transition);
+  transition: width 0.3s ease-in-out;
 }
 
 .form-group input:focus ~ .form-line,
@@ -766,11 +783,44 @@ nav {
   width: 100%;
 }
 
+button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 255, 0.2);
+}
+
+button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 255, 0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button i {
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover i {
+  transform: translateX(5px);
+}
+
 /* Footer */
 footer {
   background: var(--dark-color);
   color: white;
-  padding: 4rem 0 2rem;
+  padding: 6rem 0 2rem;
 }
 
 .footer-content {
