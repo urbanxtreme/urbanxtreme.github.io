@@ -820,7 +820,7 @@ button:hover i {
 footer {
   background: var(--dark-color);
   color: white;
-  padding: 6rem 0 2rem;
+  padding: 5rem  2rem;
 }
 
 .footer-content {
@@ -882,7 +882,7 @@ footer {
 
 .footer-bottom {
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
